@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.17.12",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.5.1",
+    "@types/node": "^17.0.34",
     "babel-jest": "^28.1.0",
     "jest": "^28.1.0",
     "tslint": "^6.1.3",
