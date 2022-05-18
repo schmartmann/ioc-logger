@@ -46,18 +46,3 @@ export class UnifiedLogger {
         ];
     }
 };
-
-// logging service should take in a log writer
-// that handles the actual,final writing of the logger
-// and we can expect it to be one of a few types
-// and if the type is not supplied, then perhaps it defaults to console.log
-// and the logging service requires certain parameters in order to log a message
-// this can be enforced in typescript
-// that way, we can have uniform presentation of logs
-// maybe it's like -- caller function name, uuid, and data?
-
-// tests
-// enforces params
-// if a third-party logger IS supplied, we ensure it is one of the valid types
-// if a third-party logger is not supplied, it's going to call console.log
-//
