@@ -1,5 +1,3 @@
-/* tslint:disable */
-
 jest.mock('fs', () => ({
     writeFile: jest.fn()
 }));
