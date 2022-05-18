@@ -1,6 +1,4 @@
-import { time } from 'console';
-import fs from 'fs';
-type FsType = typeof fs;
+import { FsType } from '../types/fs-type';
 
 export class FsLogWriter {
     sdk: FsType;
