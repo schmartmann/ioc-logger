@@ -38,7 +38,7 @@ describe('Unified Logger', () => {
         });
 
         describe('If the SDK is supplied but not supported', () => {
-            const sdk = {
+            const unsupportedSdk = {
                 log: jest.fn(),
                 warn: jest.fn(),
                 error: jest.fn(),
@@ -48,12 +48,12 @@ describe('Unified Logger', () => {
             };
 
             test('the built-in console logger becomes the fallback', () => {
-                const logger = new UnifiedLogger(sdk);
+                const logger = new UnifiedLogger(unsupportedSdk);
 
                 logger.log('hello');
-    
-                expect(sdk.log).toHaveBeenCalledTimes(0);
-                expect(console.log).toBeCalledWith(Date.now(), 'hello');    
+
+                expect(unsupportedSdk.log).toHaveBeenCalledTimes(0);
+                expect(console.log).toBeCalledWith(Date.now(), 'hello');
             });
         });
     });

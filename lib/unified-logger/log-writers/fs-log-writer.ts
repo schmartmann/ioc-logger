@@ -11,7 +11,6 @@ export class FsLogWriter {
         if (timestamp && payload) {
             this.sdk.writeFile(`./lib/unified-logger/logs/${timestamp}.txt`, payload, (error: Error) => {
                 if (error) {
-                    // tslint:disable-next-line:no-console
                     console.error(error);
                 }
             });
@@ -24,7 +23,6 @@ export class FsLogWriter {
         if (timestamp && payload) {
             this.sdk.writeFile(`./lib/unified-logger/warnings/${timestamp}.txt`, payload, (error: Error) => {
                 if (error) {
-                    // tslint:disable-next-line:no-console
                     console.error(error);
                 }
             });
@@ -37,7 +35,6 @@ export class FsLogWriter {
         if (timestamp && payload) {
             this.sdk.writeFile(`./lib/unified-logger/errors/${timestamp}.txt`, payload, (error: Error) => {
                 if (error) {
-                    // tslint:disable-next-line:no-console
                     console.error(error);
                 }
             });

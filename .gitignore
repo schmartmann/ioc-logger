@@ -1,5 +1,5 @@
 /dist
-/lib/unified-logger/errors
-/lib/unified-logger/logs
-/lib/unified-logger/warnings
+/lib/unified-logger/errors/*
+/lib/unified-logger/logs/*
+/lib/unified-logger/warnings/*
 /node_modules

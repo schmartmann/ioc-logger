@@ -1,3 +1,5 @@
+/* tslint:disable */
+
 jest.mock('fs', () => ({
     writeFile: jest.fn()
 }));
@@ -12,7 +14,7 @@ describe('FS Log Writer', () => {
     describe('with invalid params', () => {
         test('it throws an error', () => {
             expect(() => {
-                //tslint:disable-next-line
+                // @ts-expect-error
                 fsWriterClient.log()
             }).toThrowError();
         });
