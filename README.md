@@ -1,7 +1,7 @@
 # Unified Logger
 To demonstrate an IoC library, I built a quick Express app using Typescript which then calls the Unified Logger to log error messages.
 
-## Summay
+## Summary
 The SDK is a very basic beginning of what could be a very complex library, which creates a singular library to house all the different logging tools that could be required throughout an app's course of life.
 
 ## Usage
