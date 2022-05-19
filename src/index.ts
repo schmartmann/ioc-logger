@@ -1,6 +1,6 @@
 import express from 'express';
 import { UnifiedLogger } from '../lib/unified-logger';
-import { FsLogWriter } from '../lib/unified-logger/log-writers/fs-log-writer';
+import { FsHandler } from '../lib/unified-logger/handlers/fs-handler';
 import fs from 'fs';
 const app = express();
 const port = 3000;
@@ -13,8 +13,8 @@ app.post('/fs', (req, res) => {
     try {
         throw new Error('will always error to demonstrate error logger');
     } catch (error) {
-        const loggerSdk = new FsLogWriter(fs);
-        const logger = new UnifiedLogger(loggerSdk);
+        const loggerHandler = new FsHandler(fs);
+        const logger = new UnifiedLogger(loggerHandler);
         logger.error('Just produced an error');
         res.send('Finished')
     }

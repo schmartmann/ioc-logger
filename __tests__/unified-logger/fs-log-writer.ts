@@ -4,10 +4,10 @@ jest.mock('fs', () => ({
 
 import fs from 'fs';
 
-import { FsLogWriter } from '../../lib/unified-logger/log-writers/fs-log-writer';
+import { FsHandler } from '../../lib/unified-logger/handlers/fs-handler';
 
 describe('FS Log Writer', () => {
-    const fsWriterClient = new FsLogWriter(fs);
+    const fsWriterClient = new FsHandler(fs);
 
     describe('with invalid params', () => {
         test('it throws an error', () => {

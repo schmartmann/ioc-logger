@@ -1,6 +1,6 @@
 import { FsType } from '../types/fs-type';
 
-export class FsLogWriter {
+export class FsHandler {
     sdk: FsType;
 
     constructor(sdk: FsType) {
