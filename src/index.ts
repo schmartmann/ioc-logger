@@ -31,6 +31,5 @@ app.post('/console', (req, res) => {
 });
 
 app.listen(port, () => {
-    // tslint:disable-next-line:no-console
     console.log(`IOC Logging app listening on port ${port}`)
 });
